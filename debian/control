@@ -1,0 +1,15 @@
+Source: plantuml-server
+Section: utils
+Priority: optional
+Maintainer: 0xMax42 <Mail@0xMax42.io>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+
+Package: plantuml-server
+Architecture: all
+Depends: ${misc:Depends}, podman
+Description: PlantUML-Podman-Server configuration
+ Configuration and scripts for running a PlantUML-Server
+ in a Podman container, managed via systemd user services.
+ Implements socket activation for on-demand startup
+ and idle shutdown.

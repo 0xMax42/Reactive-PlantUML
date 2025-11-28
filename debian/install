@@ -1,0 +1,4 @@
+healthcheck.sh usr/lib/plantuml-server/
+wrapper.sh usr/lib/plantuml-server/
+Dockerfile usr/lib/plantuml-server/
+services/* /usr/lib/systemd/user/
