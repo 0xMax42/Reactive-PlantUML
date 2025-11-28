@@ -7,7 +7,7 @@ Standards-Version: 4.6.2
 
 Package: plantuml-server
 Architecture: all
-Depends: ${misc:Depends}, podman
+Depends: ${misc:Depends}, podman (>= 5.0)
 Description: PlantUML-Podman-Server configuration
  Configuration and scripts for running a PlantUML-Server
  in a Podman container, managed via systemd user services.
