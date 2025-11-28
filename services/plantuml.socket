@@ -1,0 +1,9 @@
+[Unit]
+Description=Socket activation for PlantUML-Server
+
+[Socket]
+ListenStream=17080
+Accept=no
+
+[Install]
+WantedBy=default.target

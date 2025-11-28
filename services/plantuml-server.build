@@ -1,0 +1,7 @@
+[Unit]
+Description=Build image for PlantUML-Server
+
+[Build]
+File=/usr/lib/plantuml-server/Dockerfile
+ImageTag=localhost/plantuml-server:latest
+SetWorkingDirectory=/usr/lib/plantuml-server/

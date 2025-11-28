@@ -1,0 +1,10 @@
+[Unit]
+Description=PlantUML-Server Proxy (rootless)
+Requires=plantuml.socket
+After=plantuml.socket
+Requires=plantuml-server.service
+After=plantuml-server.service
+
+[Service]
+Type=notify
+ExecStart=/usr/lib/systemd/systemd-socket-proxyd --exit-idle-time=120s 127.0.0.1:18080

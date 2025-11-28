@@ -1,0 +1,27 @@
+[Unit]
+Description=PlantUML-Server Container
+Requires=plantuml-server.build
+After=plantuml-server.build
+StopWhenUnneeded=yes
+
+[Container]
+ContainerName=plantuml-server
+Image=localhost/plantuml-server:latest
+PublishPort=127.0.0.1:18080:8080
+# Startup Health Check (faster checks during startup)
+HealthStartupCmd=/usr/local/bin/healthcheck.sh
+HealthStartupInterval=1s
+HealthStartupSuccess=1
+HealthStartupTimeout=1s
+HealthStartPeriod=30s
+# Regular Health Check
+HealthCmd=/usr/local/bin/healthcheck.sh
+HealthInterval=15s
+HealthRetries=2
+HealthTimeout=2s
+# Notify as started only when healthy
+Notify=healthy
+
+[Service]
+Restart=on-failure
+TimeoutStartSec=30
