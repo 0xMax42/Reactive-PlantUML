@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installsystemduser:
+	dh_installsystemduser --no-enable
