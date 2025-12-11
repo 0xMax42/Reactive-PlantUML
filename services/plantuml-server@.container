@@ -1,11 +1,11 @@
 [Unit]
-Description=PlantUML-Server Container
+Description=PlantUML-Server Container (%i)
 StopWhenUnneeded=yes
 
 [Container]
-ContainerName=plantuml-server
+ContainerName=plantuml-server-%i
 Image=plantuml-server.build
-PublishPort=127.0.0.1:18080:8080
+PublishPort=127.0.0.1:171%i:8080
 # Startup Health Check (faster checks during startup)
 HealthStartupCmd=/usr/local/bin/healthcheck.sh
 HealthStartupInterval=1s
