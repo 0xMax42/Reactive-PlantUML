@@ -23,4 +23,6 @@ Notify=healthy
 
 [Service]
 Restart=on-failure
+# Set a longer start-up timeout so that the build unit is not terminated
+TimeoutStartSec=120
 PrivateNetwork=yes
