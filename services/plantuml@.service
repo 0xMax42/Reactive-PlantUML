@@ -5,4 +5,5 @@ After=plantuml-server@%i.service
 
 [Service]
 Type=notify
+PrivateNetwork=yes
 ExecStart=/usr/lib/systemd/systemd-socket-proxyd --exit-idle-time=120s 127.0.0.1:171%i
