@@ -1,4 +1,4 @@
-FROM ubuntu:25.10@sha256:9b61739164b58f2263067bd3ab31c7746ded4cade1f9d708e6f1b047b408a470
+FROM ubuntu:25.10@sha256:5922638447b1e3ba114332c896a2c7288c876bb94adec923d70d58a17d2fec5e
 
 # renovate:ubuntu: suite=questing-security arch=amd64 depName=openjdk-17-jre 
 ARG OPENJDK_17_JRE_VERSION="17.0.17+10-1~25.10"
