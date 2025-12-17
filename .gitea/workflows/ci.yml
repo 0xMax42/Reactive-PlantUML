@@ -48,10 +48,14 @@ jobs:
           cache-to: |
             type=registry,ref=${{ env.IMAGE_NAME }}:${{ env.CACHE_TAG }}-${{ env.TAG_NAME }},mode=max
           load: true
+          push: false
 
       - name: Test Docker Image (smoke test)
         run: |
           set -e
+
+          docker stop plantuml-test || true
+          docker rm -f plantuml-test || true
 
           docker run -d --name plantuml-test ${{ env.IMAGE_NAME }}:${{ env.TAG_NAME }}
 
@@ -61,6 +65,7 @@ jobs:
             docker logs plantuml-test || true
             echo
             echo "## Removing test container"
+            docker stop plantuml-test || true
             docker rm -f plantuml-test || true
           }
           trap cleanup EXIT
