@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(ci)* Add workflow to build and publish DEB package on release - ([fd3a421](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/fd3a421059ff7591771e285e5a4e7117055a0554))
 - *(release)* Add workflow for automated changelog and release - ([167c77c](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/167c77c637b0e78e57dbbd28449177c5c929ed09))
 - *(debian)* Add postinst and postrm scripts for systemd user units - ([df60cb5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/df60cb5d40a79c65f24f9caa398b91ae72ec320d))
 - *(debian)* Add rules file with systemd user override - ([4d63c14](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/4d63c14ff0c09a9ffd2e8f0c124ec8429736a685))
