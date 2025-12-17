@@ -39,6 +39,7 @@ jobs:
           exit 0
 
       - name: Bump patch version
+        if: steps.check.outputs.run == 'true'
         run: |
           set -e
 
@@ -67,9 +68,11 @@ jobs:
           git commit -m "chore(version): bump version to $NEW_VERSION" -m "Update dependencys"
 
       - name: Push delay
+        if: steps.check.outputs.run == 'true'
         run: sleep 60
 
       - name: Rebase and push
+        if: steps.check.outputs.run == 'true'
         run: |
           set -e
 
