@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(config)* Add Renovate configuration for dependency automation - ([fb5e256](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/fb5e2563f3fd5821b0d567438155379efc08826d))
+- *(dockerfile)* Pin dependencies with ARGs for reproducibility - ([4ec0123](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/4ec0123e9058edd7a535e646e8a98019a8888da2))
 - *(ci)* Add workflow for Docker build and smoke test - ([ffd3515](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ffd3515c2589474ffcde8d9cca90ff3d1e20fa92))
 
 ## [0.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.2..v0.1.3) - 2025-12-17
