@@ -15,7 +15,7 @@ case "$1" in
     echo "Note: Run as user:"
     echo "  systemctl --user enable plantuml@n.socket"
     echo "to enable the PlantUML socket."
-    echo "`n` corresponds to the port offset you want to use:"
+    echo "n corresponds to the port offset you want to use:"
     echo "  Port = 170n"
     ;;
 esac
