@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Initial delay
-        run: sleep 60
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -68,6 +65,9 @@ jobs:
 
           git add "$VERSION_FILE"
           git commit -m "chore(version): bump version to $NEW_VERSION" -m "Update dependencys"
+
+      - name: Push delay
+        run: sleep 60
 
       - name: Rebase and push
         run: |
