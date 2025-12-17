@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(dockerfile)* Update base image and dependency versions - ([1bb06b9](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/1bb06b93990fe369baad6562b7e342be57c0f404))
 - *(ci)* Adjust delay timing in version bump workflow - ([7a8f365](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/7a8f365313b73e0d2f4df447297feabf9ac1e0e3))
 - *(config)* Update renovate rules for update type handling - ([fdc83ce](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/fdc83cef7cf9c2a7a2b026afb8b89efb57605d38))
 - *(ci)* Add workflow to auto bump version on dependency updates - ([3e5b814](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/3e5b8146bb25c72b4dfa9797af18e9c5a2c16096))
