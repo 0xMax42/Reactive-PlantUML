@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.5](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.3..v0.1.5) - 2025-12-17
 
 ### 🐛 Bug Fixes
 
