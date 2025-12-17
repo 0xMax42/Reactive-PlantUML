@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.1..v0.1.2) - 2025-12-17
+
+### 🐛 Bug Fixes
+
+- Update postinst script usage instructions - ([f3159ab](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f3159ab1e3b1d2911a11c66bddda47b7e1a25fa4))
+- *(debian)* Update install paths for systemd and container services - ([3aa588b](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/3aa588b79bb89ed02d5215f8b5543512975b7bf6))
+
 ## [0.1.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.0..v0.1.1) - 2025-12-17
 
 ### ⚙️ Miscellaneous Tasks
