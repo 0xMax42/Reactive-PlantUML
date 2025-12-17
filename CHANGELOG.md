@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(ci)* Add workflow for Docker build and smoke test - ([ffd3515](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ffd3515c2589474ffcde8d9cca90ff3d1e20fa92))
+
 ## [0.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.2..v0.1.3) - 2025-12-17
 
 ### 🐛 Bug Fixes
