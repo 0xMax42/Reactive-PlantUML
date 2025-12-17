@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(dockerfile)* Fix PlantUML download URL - ([beb8af5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/beb8af5dad6cd57bacb146cd30187b02dff9d6e5))
+
 ### ⚙️ Miscellaneous Tasks
 
 - *(dockerfile)* Update base image and dependency versions - ([1bb06b9](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/1bb06b93990fe369baad6562b7e342be57c0f404))
