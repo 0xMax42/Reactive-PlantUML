@@ -15,7 +15,7 @@ RUN apt-get update -qq \
     graphviz=$GRAPHVIZ_VERSION \
     curl=$CURL_VERSION \
     && curl -L \
-    https://github.com/plantuml/plantuml/releases/$PLANTUML_VERSION/download/plantuml.jar \
+    https://github.com/plantuml/plantuml/releases/download/$PLANTUML_VERSION/plantuml.jar \
     -o /usr/local/bin/plantuml.jar \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
