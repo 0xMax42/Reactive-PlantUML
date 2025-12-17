@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.2..v0.1.3) - 2025-12-17
+
+### 🐛 Bug Fixes
+
+- Remove PrivateNetwork and namespace settings from service configs - ([a9815c0](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a9815c09fb33aee8a3bb8a6c8d5da9a8b04f82b9))
+
 ## [0.1.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.1..v0.1.2) - 2025-12-17
 
 ### 🐛 Bug Fixes
