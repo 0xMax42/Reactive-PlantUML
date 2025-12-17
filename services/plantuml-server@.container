@@ -1,7 +1,6 @@
 [Unit]
 Description=PlantUML-Server Container (%i)
 StopWhenUnneeded=yes
-JoinsNamespaceOf=plantuml@%i.service
 
 [Container]
 ContainerName=plantuml-server-%i
@@ -25,4 +24,3 @@ Notify=healthy
 Restart=on-failure
 # Set a longer start-up timeout so that the build unit is not terminated
 TimeoutStartSec=120
-PrivateNetwork=yes
