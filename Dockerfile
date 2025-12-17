@@ -1,11 +1,11 @@
-FROM ubuntu:25.10@sha256:5922638447b1e3ba114332c896a2c7288c876bb94adec923d70d58a17d2fec5e
+FROM ubuntu:noble@sha256:c35e29c9450151419d9448b0fd75374fec4fff364a27f176fb458d472dfc9e54
 
-# renovate:ubuntu: suite=questing-security arch=amd64 depName=openjdk-17-jre 
-ARG OPENJDK_17_JRE_VERSION="17.0.17+10-1~25.10"
-# renovate:ubuntu: suite=questing arch=amd64 depName=graphviz 
-ARG GRAPHVIZ_VERSION="2.42.4-3build2"
-# renovate:ubuntu: suite=questing arch=amd64 depName=curl 
-ARG CURL_VERSION="8.14.1-2ubuntu1"
+# renovate:ubuntu: suite=noble-security arch=amd64 depName=openjdk-17-jre 
+ARG OPENJDK_17_JRE_VERSION="17.0.17+10-1~24.04"
+# renovate:ubuntu: suite=noble arch=amd64 depName=graphviz 
+ARG GRAPHVIZ_VERSION="2.42.2-9build1"
+# renovate:ubuntu: suite=noble arch=amd64 depName=curl 
+ARG CURL_VERSION="8.5.0-2ubuntu10.6"
 # renovate:github-release: packageName=plantuml/plantuml
 ARG PLANTUML_VERSION="v1.2025.10"
 
