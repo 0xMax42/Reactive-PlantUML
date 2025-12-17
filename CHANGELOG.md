@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.0..v0.1.1) - 2025-12-17
+
+### ⚙️ Miscellaneous Tasks
+
+- *(debian)* Fix socket port offset usage message - ([a9c94d0](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a9c94d0f24a3c21a34333be97ba525a21fbc43d7))
+
 ## [0.1.0] - 2025-12-17
 
 ### 🚀 Features
