@@ -1,0 +1,141 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":semanticCommits",
+        ":semanticCommitTypeAll(chore)",
+        "mergeConfidence:all-badges"
+    ],
+    "semanticCommitScope": "deps",
+    "automergeStrategy": "rebase",
+    "packageRules": [
+        {
+            "description": "Automerge Docker digest updates",
+            "matchManagers": [
+                "dockerfile"
+            ],
+            "matchUpdateTypes": [
+                "digest"
+            ],
+            "automerge": true,
+            "automergeStrategy": "rebase",
+            "automergeType": "pr",
+            labels: [
+                "dependency/automerge",
+                "dependency/docker/digest"
+            ],
+        },
+        {
+            description: "Automerge Github patch release version updates",
+            matchDatasources: [
+                "github-releases"
+            ],
+            matchUpdateTypes: [
+                "patch"
+            ],
+            automerge: true,
+            automergeStrategy: "rebase",
+            automergeType: "pr",
+            labels: [
+                "dependency/automerge",
+                "dependency/github/patch"
+            ],
+            "groupName": "github release updates",
+        },
+        {
+            description: "Automerge Github minor release version updates",
+            matchDatasources: [
+                "github-releases"
+            ],
+            matchUpdateTypes: [
+                "minor",
+            ],
+            automerge: true,
+            automergeStrategy: "rebase",
+            automergeType: "pr",
+            labels: [
+                "dependency/automerge",
+                "dependency/github/minor"
+            ],
+            "groupName": "github release updates",
+        },
+        {
+            description: "Automerge Debian patch package version updates",
+            matchDatasources: [
+                "deb"
+            ],
+            matchUpdateTypes: [
+                "patch"
+            ],
+            automerge: true,
+            automergeStrategy: "rebase",
+            automergeType: "pr",
+            labels: [
+                "dependency/automerge",
+                "dependency/debian/patch"
+            ],
+            "groupName": "debian package updates",
+        },
+        {
+            description: "Automerge Debian minor package version updates",
+            matchDatasources: [
+                "deb"
+            ],
+            matchUpdateTypes: [
+                "minor",
+            ],
+            automerge: true,
+            automergeStrategy: "rebase",
+            automergeType: "pr",
+            labels: [
+                "dependency/automerge",
+                "dependency/debian/minor"
+            ],
+            "groupName": "debian package updates",
+        },
+        {
+            "description": "Disable all updates for GitHub actions and GitHub runners",
+            "matchManagers": [
+                "github-actions"
+            ],
+            "enabled": false
+        }
+    ],
+    "customManagers": [
+        {
+            customType: "regex",
+            managerFilePatterns: [
+                "/Dockerfile$/"
+            ],
+            // Pattern: 
+            // # renovate:ubuntu: suite=XYZ arch=ABC depName=NAME 
+            // ARG FOO_VERSION="1.2.3"
+            matchStrings: [
+                '#\\s*renovate:ubuntu:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\sARG .*?_VERSION="(?<currentValue>.*)"',
+            ],
+            registryUrlTemplate: "https://archive.ubuntu.com/ubuntu{{#if suite}}?suite={{suite}}&{{else}}?{{/if}}components=main,universe,multiverse&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
+            datasourceTemplate: "deb",
+            versioningTemplate: "deb",
+        },
+        {
+            "customType": "regex",
+            "managerFilePatterns": [
+                "/Dockerfile$/"
+            ],
+            // Pattern:
+            // # renovate:github-release: [registryUrl=...] packageName=OWNER/REPO [depName=NAME]
+            // ARG FOO_VERSION="v1.2.3"
+            "matchStrings": [
+                "#\\s*renovate:github-release:\\s*(?:registryUrl=(?<registryUrl>\\S+)\\s+)?packageName=(?<packageName>\\S+)(?:\\s+depName=(?<depName>\\S+))?\\s*\\n\\s*ARG\\s+(?<argName>[A-Za-z0-9_]+_VERSION)=\"(?<currentValue>[^\"]+)\""
+            ],
+            "datasourceTemplate": "github-releases",
+            // github-releases has no default versioning; regex managers default to semver-coerced,
+            // but being explicit helps when tags are like "v1.2.3".
+            "versioningTemplate": "semver-coerced",
+            "registryUrlTemplate": "{{#if registryUrl}}{{registryUrl}}{{else}}https://github.com/{{/if}}",
+            "packageNameTemplate": "{{{packageName}}}",
+            "depNameTemplate": "{{#if depName}}{{{depName}}}{{else}}{{{packageName}}}{{/if}}",
+            "autoReplaceStringTemplate": "# renovate:github-release:{{#if registryUrl}} registryUrl={{{registryUrl}}}{{/if}} packageName={{{packageName}}}{{#if depName}} depName={{{depName}}}{{/if}}\\nARG {{{argName}}}=\"{{{newValue}}}\""
+        }
+    ]
+}
