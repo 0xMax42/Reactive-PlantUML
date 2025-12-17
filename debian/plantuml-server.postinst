@@ -2,18 +2,18 @@
 set -e
 
 case "$1" in
-    configure|abort-upgrade|abort-deconfigure|abort-remove)
-        if [ -z "$DPKG_ROOT" ] && [ -d /run/systemd/system ]; then
-            # Reload systemd user units for all users
-            deb-systemd-invoke --user --no-dbus daemon-reload >/dev/null || true
-        fi
+configure | abort-upgrade | abort-deconfigure | abort-remove)
+    if [ -z "$DPKG_ROOT" ] && [ -d /run/systemd/system ]; then
+        # Reload systemd user units for all users
+        deb-systemd-invoke --user --no-dbus daemon-reload >/dev/null || true
+    fi
     ;;
 esac
 
 case "$1" in
-  configure)
+configure)
     echo "Note: Run as user:"
-    echo "  systemctl --user enable plantuml@n.socket"
+    echo "  systemctl --user enable --now plantuml@n.socket"
     echo "to enable the PlantUML socket."
     echo "n corresponds to the port offset you want to use:"
     echo "  Port = 170n"
