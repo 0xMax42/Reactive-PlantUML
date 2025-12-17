@@ -94,6 +94,22 @@
             "groupName": "debian package updates",
         },
         {
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ],
+            "enabled": true
+        },
+        {
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "dependencyDashboardApproval": true,
+            "enabled": true
+        },
+        {
             "description": "Disable all updates for GitHub actions and GitHub runners",
             "matchManagers": [
                 "github-actions"
