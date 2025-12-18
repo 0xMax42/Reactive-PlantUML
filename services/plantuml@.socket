@@ -2,7 +2,7 @@
 Description=Socket activation for PlantUML-Server
 
 [Socket]
-ListenStream=170%i
+ListenStream=%i
 Service=plantuml@%i.service
 Accept=no
 
