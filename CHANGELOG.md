@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 📚 Documentation
+
+- Add project documentation and license - ([9cb49b1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9cb49b150bd2409c13084a7498a10d91007f5833))
+
 ## [1.0.0](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.5..v1.0.0) - 2025-12-18
 
 ### 🚀 Features
