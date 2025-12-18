@@ -5,3 +5,15 @@
 
 override_dh_installsystemduser:
 	dh_installsystemduser --no-enable
+
+override_dh_auto_install:
+	make install DESTDIR=$(CURDIR)/debian/plantuml-server
+
+override_dh_auto_build:
+	echo "Nothing to build in override_dh_auto_build"
+
+override_dh_auto_test:
+	echo "Nothing to test in override_dh_auto_test"
+
+override_dh_auto_clean:
+	echo "Nothing to clean in override_dh_auto_clean"

@@ -1,7 +1,0 @@
-healthcheck.sh usr/lib/plantuml-server/
-wrapper.sh usr/lib/plantuml-server/
-Dockerfile usr/lib/plantuml-server/
-services/plantuml@.service /usr/lib/systemd/user/
-services/plantuml@.socket /usr/lib/systemd/user/
-services/plantuml-server@.container /etc/containers/systemd/users/
-services/plantuml-server.build /etc/containers/systemd/users/
