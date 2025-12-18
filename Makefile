@@ -38,7 +38,7 @@ help:
 
 
 build:
-	podman build -t $(IMAGE_NAME):$(IMAGE_TAG) .
+	$(CONTAINER_EXEC) build -t $(IMAGE_NAME):$(IMAGE_TAG) .
 
 test:
 	@set -e; \
