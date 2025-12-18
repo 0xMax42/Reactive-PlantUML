@@ -5,7 +5,10 @@ StopWhenUnneeded=yes
 [Container]
 ContainerName=plantuml-server-%i
 Image=plantuml-server.build
-PublishPort=127.0.0.1:171%i:8080
+# Mount user runtime dir
+Volume=%t/plantuml:/run/plantuml:rw
+# Pass socket path into container
+Environment=SOCKET_PATH=/run/plantuml/%i.sock
 # Startup Health Check (faster checks during startup)
 HealthStartupCmd=/usr/local/bin/healthcheck.sh
 HealthStartupInterval=1s
@@ -24,3 +27,5 @@ Notify=healthy
 Restart=on-failure
 # Set a longer start-up timeout so that the build unit is not terminated
 TimeoutStartSec=120
+RuntimeDirectory=plantuml
+RuntimeDirectoryMode=0755

@@ -6,6 +6,8 @@ ARG OPENJDK_17_JRE_VERSION="17.0.17+10-1~24.04"
 ARG GRAPHVIZ_VERSION="2.42.2-9build1"
 # renovate:ubuntu: suite=noble arch=amd64 depName=curl 
 ARG CURL_VERSION="8.5.0-2ubuntu10.6"
+# renovate:ubuntu: suite=noble arch=amd64 depName=socat 
+ARG SOCAT_VERSION="1.8.0.0-4build3"
 # renovate:github-release: packageName=plantuml/plantuml
 ARG PLANTUML_VERSION="v1.2025.10"
 
@@ -14,6 +16,7 @@ RUN apt-get update -qq \
     openjdk-17-jre=$OPENJDK_17_JRE_VERSION \
     graphviz=$GRAPHVIZ_VERSION \
     curl=$CURL_VERSION \
+    socat=$SOCAT_VERSION \
     && curl -L \
     https://github.com/plantuml/plantuml/releases/download/$PLANTUML_VERSION/plantuml.jar \
     -o /usr/local/bin/plantuml.jar \
