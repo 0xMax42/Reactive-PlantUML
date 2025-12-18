@@ -56,4 +56,7 @@ jobs:
 
       - name: Test Docker Image (smoke test)
         run: |
-          CONTAINER_EXEC=docker make test
+          CONTAINER_EXEC=docker \
+          IMAGE_NAME=${{ env.IMAGE_NAME }} \
+          IMAGE_TAG=${{ env.TAG_NAME }} \
+          make test
