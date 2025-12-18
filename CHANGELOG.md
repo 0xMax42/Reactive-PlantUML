@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.5..v1.0.0) - 2025-12-18
+
+### 🚀 Features
+
+- *(service)* [**breaking**] Update socket ListenStream to use full instance variable as port; no prefix anymore - ([f94bc9d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f94bc9d1a839f0c11fe57d5665fee03db0b423c5))
+- Enable UNIX socket activation and proxy for PlantUML server - ([84e6d1d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/84e6d1d84d19c54cfc51a1eeae64368f70c5b071))
+
 ## [0.1.5](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.3..v0.1.5) - 2025-12-17
 
 ### 🐛 Bug Fixes
