@@ -2,11 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.0.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.0..v1.0.1) - 2025-12-18
+
+### 🐛 Bug Fixes
+
+- *(build)* Use configurable container engine for build - ([e7294e7](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/e7294e7269144087229651e390a960c772d1086b))
 
 ### 📚 Documentation
 
+- Add Debian-specific user service setup instructions - ([27fbadd](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/27fbadd8486e5823c4f003e02cad8af2908ba469))
 - Add project documentation and license - ([9cb49b1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9cb49b150bd2409c13084a7498a10d91007f5833))
+
+### ⚙️ Miscellaneous Tasks
+
+- Add post-installation message to install target - ([cc9779e](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/cc9779e3e899a92455756587193c594efcbcf348))
+- Add debug helper comment to run target in Makefile - ([b5d1190](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/b5d1190e7127f5f802c35dab30a2bc30fe987a07))
+- *(ci)* Pass image name and tag to Docker test job - ([b0026da](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/b0026da75279d0a224207c2fdde916cd59f89fb2))
+- *(ci)* Streamline test step and install make dependency - ([b8c2f3d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/b8c2f3d2db03e03ca3e8ae21a38a39dee3010d7b))
+- *(ci)* Increase apt-get install quietness in workflow - ([19faa36](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/19faa362b1ba062a88e0c5e8e0d167dac0d7342f))
+- *(build)* Migrate install logic from debian to Makefile - ([08eb522](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/08eb5221d90b1e3a16bfbb39db94beeadecf53bc))
+- *(debian)* Clarify port usage message in postinst script - ([f308cbc](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f308cbccc742a655f9da2b4a60b41437fabebd08))
 
 ## [1.0.0](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.5..v1.0.0) - 2025-12-18
 
