@@ -1,0 +1,25 @@
+Reactive-PlantUML – User Service Setup
+=====================================
+
+Reactive-PlantUML provides a PlantUML server as a systemd *user* service
+with socket activation.
+
+After installation, no service is started automatically.
+
+To enable a PlantUML server instance, run as the target user:
+
+  systemctl --user enable --now plantuml@n.socket
+
+Replace "n" with the TCP port number you want to expose locally.
+The instance name directly corresponds to the port.
+
+Example:
+
+  systemctl --user enable --now plantuml@8080.socket
+
+This will expose the PlantUML server on:
+
+  http://localhost:8080
+
+The service starts on first access and shuts down automatically
+after a period of inactivity.
