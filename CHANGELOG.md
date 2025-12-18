@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(ci)* Add release asset upload step to workflow - ([e9c7012](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/e9c7012e88b15d4e2ffd8c9ed154e3fc9914de5a))
 - *(ci)* Add release sync step to workflow - ([5fdc33a](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/5fdc33a93cb33871c9db6c90e0dd2bb1563ab701))
 
 ## [1.0.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.0..v1.0.1) - 2025-12-18
