@@ -67,6 +67,7 @@ test:
 	exit 1
 
 run:
+	# Debug helper, not used in production
 	@echo "Running container image $(IMAGE_NAME):$(IMAGE_TAG) on port $(DEBUG_PORT)"
 	$(CONTAINER_EXEC) run --rm -it \
 		-e SOCKET_PATH=/tmp/plantuml.sock \
