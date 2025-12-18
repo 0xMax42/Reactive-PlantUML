@@ -96,6 +96,7 @@ install:
 		$(DESTDIR)$(SYSTEMD_USER_CONTAINER_DIR)/
 	install -m 0644 services/plantuml-server.build \
 		$(DESTDIR)$(SYSTEMD_USER_CONTAINER_DIR)/
+	# Post-installation message
 	@echo "Installation complete."
 	@echo "Note: Run as user:"
 	@echo "  systemctl --user daemon-reload"
