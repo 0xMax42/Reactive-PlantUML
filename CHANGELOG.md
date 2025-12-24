@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚜 Refactor
+
+- Consistently quote variable expansions in shell scripts - ([4aedfd6](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/4aedfd6dbfd2f0ad4e787300f80e97b0ab856ac4))
+
 ### ⚙️ Miscellaneous Tasks
 
 - *(ci)* Update package names to versioned dependencies - ([9ef5cc1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9ef5cc17e7f44fa221d19693f57ede32f9f65974))
@@ -53,6 +57,10 @@ All notable changes to this project will be documented in this file.
 - *(config)* Add Renovate configuration for dependency automation - ([fb5e256](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/fb5e2563f3fd5821b0d567438155379efc08826d))
 - *(dockerfile)* Pin dependencies with ARGs for reproducibility - ([4ec0123](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/4ec0123e9058edd7a535e646e8a98019a8888da2))
 - *(ci)* Add workflow for Docker build and smoke test - ([ffd3515](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ffd3515c2589474ffcde8d9cca90ff3d1e20fa92))
+
+### 📦 Dependencies
+
+- *(deps)* Update ubuntu:25.10 docker digest to 5922638 - ([cc124f1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/cc124f1c8567619ea3802a8a3af03a77c8ffc05d))
 
 ## [0.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v0.1.2..v0.1.3) - 2025-12-17
 
