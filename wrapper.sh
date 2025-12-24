@@ -20,8 +20,8 @@ java_pid=$!
 # Start socat (UNIX → TCP)
 # =========================
 socat \
-     UNIX-LISTEN:"$SOCKET_PATH",fork,mode=660,unlink-close \
-     TCP:"$TCP_TARGET" &
+     UNIX-LISTEN:"${SOCKET_PATH}",fork,mode=660,unlink-close \
+     TCP:"${TCP_TARGET}" &
 socat_pid=$!
 
 # =========================
@@ -29,14 +29,14 @@ socat_pid=$!
 # =========================
 trap '
   echo "Received termination signal, shutting down..."
-  kill -TERM "$socat_pid" "$java_pid" 2>/dev/null || true
-  wait "$socat_pid" "$java_pid" 2>/dev/null || true
+  kill -TERM "${socat_pid}" "${java_pid}" 2>/dev/null || true
+  wait "${socat_pid}" "${java_pid}" 2>/dev/null || true
   exit 0
 ' TERM INT
 
 # =========================
 # Wait for processes
 # =========================
-wait "$java_pid"
-wait "$socat_pid"
+wait "${java_pid}"
+wait "${socat_pid}"
 exit 0
