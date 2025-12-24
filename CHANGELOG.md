@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(systemd)* Bind plantuml socket to localhost - ([fc2a0e7](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/fc2a0e74fc87d25c72f7bc7bb9fc7e5065445bd1))
+
 ### 🚜 Refactor
 
 - Consistently quote variable expansions in shell scripts - ([4aedfd6](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/4aedfd6dbfd2f0ad4e787300f80e97b0ab856ac4))
