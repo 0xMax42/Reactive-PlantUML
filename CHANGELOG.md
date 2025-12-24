@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(ci)* Publish deb packages to debrepo in release workflow - ([ddc44b5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ddc44b527dfb09a87aa03fc3d050156679a3f982))
+
 ## [1.0.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.1..v1.0.2) - 2025-12-24
 
 ### 🐛 Bug Fixes
