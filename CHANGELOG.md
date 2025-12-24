@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🎨 Styling
+
+- *(debian)* Adjust postinst echo message indentation - ([bf2b8ca](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/bf2b8cad240243638def1e7a296b878e84e246e1))
+
 ### ⚙️ Miscellaneous Tasks
 
 - *(ci)* Publish deb packages to debrepo in release workflow - ([ddc44b5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ddc44b527dfb09a87aa03fc3d050156679a3f982))
