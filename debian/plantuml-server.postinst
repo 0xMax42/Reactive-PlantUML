@@ -25,6 +25,7 @@ configure)
         echo "   They will pick up the new version on the next activation"
         echo "    or after a manual restart."
     fi
+    echo ""
     ;;
 *) ;;
 esac
