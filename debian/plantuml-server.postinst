@@ -18,6 +18,13 @@ configure)
     echo "       systemctl --user enable --now plantuml@n.socket"
     echo "   to enable the PlantUML socket."
     echo "    *n* corresponds to the port you wish to use (e.g. 8080 for 8080)."
+    if [ -n "$2" ]; then # The second argument is non-empty during upgrades
+        echo "Note:"
+        echo "   Active user socket instances are not restarted automatically"
+        echo "    during package upgrades."
+        echo "   They will pick up the new version on the next activation"
+        echo "    or after a manual restart."
+    fi
     ;;
 *) ;;
 esac
