@@ -4,25 +4,24 @@ set -e
 #DEBHELPER#
 
 case "$1" in
-  purge)
-    if [ -z "$DPKG_ROOT" ] && [ -x "/usr/bin/deb-systemd-helper" ]; then
-        # Remove all user unit files
-        deb-systemd-helper --user purge \
-            plantuml.service \
-            plantuml-server.service \
-            plantuml-server-build.service \
-            >/dev/null || true
+purge)
+  if [ -z "${DPKG_ROOT}" ] && [ -x "/usr/bin/deb-systemd-helper" ]; then
+    # Remove all user unit files
+    deb-systemd-helper --user purge \
+      plantuml@.socket \
+      plantuml@.service \
+      plantuml-server@.service \
+      plantuml-server-build.service \
+      >/dev/null || true
 
-        # Reload for all user@UID instances
-        deb-systemd-invoke --user --no-dbus daemon-reload >/dev/null || true
-    fi
-    ;;
-esac
-
-case "$1" in
-  remove)
+    # Reload for all user@UID instances
     deb-systemd-invoke --user --no-dbus daemon-reload >/dev/null || true
-    ;;
+  fi
+  ;;
+remove)
+  deb-systemd-invoke --user --no-dbus daemon-reload >/dev/null || true
+  ;;
+*) ;;
 esac
 
 exit 0
