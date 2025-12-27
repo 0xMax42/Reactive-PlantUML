@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🐛 Bug Fixes
+
+- *(debian)* Adjust maintainer scripts for user systemd units - ([45808b1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/45808b1de4295a3921719ddc5339260beaf04e4f))
+
+### 📚 Documentation
+
+- *(debian)* Clarify upgrade behavior for user socket instances - ([56348d0](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/56348d048a34bddc0c54b86bfbd2313aed966dd6))
+
 ## [1.0.3-pre.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.2..v1.0.3-pre.1) (pre-release) - 2025-12-27
 
 ### 🐛 Bug Fixes
