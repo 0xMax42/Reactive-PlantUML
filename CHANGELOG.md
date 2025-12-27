@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🎨 Styling
+
+- *(debian)* Add blank line after postinst upgrade notice - ([31e8a42](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/31e8a429917e12ea3277428e98b26950381e854c))
+
 ## [1.0.3-pre.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.3-pre.1..v1.0.3-pre.2) (pre-release) - 2025-12-27
 
 ### 🐛 Bug Fixes
