@@ -8,3 +8,72 @@ Type=notify
 ExecStart=/usr/lib/systemd/systemd-socket-proxyd \
   --exit-idle-time=120s \
   %t/plantuml/%i.sock
+
+# Identity & IPC isolation
+# - Avoid user namespaces (break local UNIX IPC)
+# - Remove stale IPC objects on service stop
+PrivateUsers=no
+RemoveIPC=yes
+
+# File creation & default permissions
+# - Ensure all created files are private by default
+UMask=0077
+
+# Privilege & capability hardening
+# - Prevent privilege escalation and drop all Linux capabilities
+NoNewPrivileges=yes
+KeyringMode=private
+CapabilityBoundingSet=
+AmbientCapabilities=
+
+# Filesystem protection
+# - Make the OS tree read-only
+# - Keep runtime (/run/user) accessible while locking $HOME
+ProtectSystem=strict
+ProtectHome=read-only
+
+# Kernel & host protection
+# - Block access to kernel tunables, modules, logs, clocks and hostname
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectClock=yes
+ProtectHostname=yes
+
+# /proc visibility reduction
+# - Expose only minimal process information
+ProtectProc=invisible
+ProcSubset=pid
+
+# Namespace & device isolation
+# - Isolate IPC, mounts, devices and temporary files
+# - Disallow creation of any new namespaces
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateMounts=yes
+PrivateIPC=yes
+RestrictNamespaces=yes
+
+# Network isolation
+# - No access to host networking or IP space
+PrivateNetwork=yes
+IPAddressDeny=any
+
+# System call filtering
+# - Allow only standard service syscalls
+# - Explicitly deny privileged and resource-control syscalls
+SystemCallArchitectures=native
+SystemCallFilter=@system-service ~@privileged ~@resources
+SystemCallErrorNumber=EPERM
+
+# Socket address families
+# - Allow only local UNIX sockets (required for IPC proxying)
+RestrictAddressFamilies=AF_UNIX
+
+# Execution hardening
+# - Prevent writable executable memory, ABI tricks, SUID files and RT scheduling
+MemoryDenyWriteExecute=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RestrictRealtime=yes
