@@ -2,15 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.0.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.3-pre.2..v1.0.3) - 2026-01-03
+
+### 🐛 Bug Fixes
+
+- *(debian)* Adjust maintainer scripts for user systemd units - (from [v1.0.3-pre.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/releases/tag/v1.0.3-pre.2)) - ([45808b1](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/45808b1de4295a3921719ddc5339260beaf04e4f))
+- *(systemd)* Harden plantuml service with stricter sandboxing - (from [v1.0.3-pre.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/releases/tag/v1.0.3-pre.1)) - ([539cf0b](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/539cf0b3271d22d9efb75b1a4042a66ba057a012))
+
+### 📚 Documentation
+
+- *(debian)* Clarify upgrade behavior for user socket instances - (from [v1.0.3-pre.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/releases/tag/v1.0.3-pre.2)) - ([56348d0](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/56348d048a34bddc0c54b86bfbd2313aed966dd6))
 
 ### 🎨 Styling
 
 - *(debian)* Add blank line after postinst upgrade notice - ([31e8a42](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/31e8a429917e12ea3277428e98b26950381e854c))
+- *(debian)* Adjust postinst echo message indentation - (from [v1.0.3-pre.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/releases/tag/v1.0.3-pre.1)) - ([bf2b8ca](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/bf2b8cad240243638def1e7a296b878e84e246e1))
 
 ### ⚙️ Miscellaneous Tasks
 
+- Prepare release v1.0.3 - ([95725d3](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/95725d3cae1ec981164ddd2d2da9c10a8948ed49))
 - *(ci)* Adjust release workflow deb upload and asset order - ([a767435](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a7674353c5826dee84befd4e48ffd31f3452d5df))
+- *(ci)* Publish deb packages to debrepo in release workflow - (from [v1.0.3-pre.1](https://git.0xmax42.io/maxp/Reactive-PlantUML/releases/tag/v1.0.3-pre.1)) - ([ddc44b5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ddc44b527dfb09a87aa03fc3d050156679a3f982))
 
 ## [1.0.3-pre.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.3-pre.1..v1.0.3-pre.2) (pre-release) - 2025-12-27
 
