@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🚜 Refactor
+
+- *(dockerfile)* Switch image to debian and add snapshot pinning - ([38eae20](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/38eae20d50929ac7ddafa7fb2fd972386bd5f8c3))
+
+### ⚙️ Miscellaneous Tasks
+
+- Extend renovate config for debian regex manager - ([e2dce9e](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/e2dce9e3bade1389f776c1589e11d70b9fd56fb3))
+
 ## [1.0.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.0.3-pre.2..v1.0.3) - 2026-01-03
 
 ### 🐛 Bug Fixes
