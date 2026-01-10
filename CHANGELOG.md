@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(ci)* Adjust auto bump workflow authentication and push logic - ([990c252](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/990c25258a9684fe667b94311dc292028139cf50))
+
 ### ⚙️ Miscellaneous Tasks
 
 - *(ci)* Harden auto bump workflow authentication and push handling - ([0573dcf](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/0573dcfd2002d4da5f25d200498b6528df285efa))
