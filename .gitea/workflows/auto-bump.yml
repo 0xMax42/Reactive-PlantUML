@@ -13,7 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # required for rebase
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Get triggering commit message
         id: commitmsg
@@ -72,19 +73,11 @@ jobs:
         run: sleep 60
 
       - name: Rebase and push
-        if: steps.check.outputs.run == 'true'
         env:
           GITEA_USER: ${{ secrets.RELEASE_PUBLISH_USER }}
           GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
         run: |
           set -euo pipefail
-
-          # Kill credentials injected by checkout
-          git config --unset-all http.https://git.0xmax42.io/.extraheader || true
-          git config --unset-all http.extraheader || true
-          git config --global --unset-all http.extraheader || true
-          git config --global --unset-all credential.helper || true
-          unset GIT_ASKPASS
 
           git remote remove origin || true
           git remote add origin \
