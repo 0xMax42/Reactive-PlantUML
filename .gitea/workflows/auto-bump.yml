@@ -73,9 +73,26 @@ jobs:
 
       - name: Rebase and push
         if: steps.check.outputs.run == 'true'
+        env:
+          GITEA_USER: ${{ secrets.RELEASE_PUBLISH_USER }}
+          GITEA_TOKEN: ${{ secrets.RELEASE_PUBLISH_TOKEN }}
         run: |
-          set -e
+          set -euo pipefail
+
+          # Kill credentials injected by checkout
+          git config --unset-all http.https://git.0xmax42.io/.extraheader || true
+          git config --unset-all http.extraheader || true
+          git config --global --unset-all http.extraheader || true
+          git config --global --unset-all credential.helper || true
+          unset GIT_ASKPASS
+
+          git remote remove origin || true
+          git remote add origin \
+            "https://${GITEA_USER}:${GITEA_TOKEN}@git.0xmax42.io/${GITHUB_REPOSITORY}.git"
 
           git fetch origin main
           git rebase origin/main
+
+          git branch --set-upstream-to=origin/main main
+
           git push origin HEAD:main
