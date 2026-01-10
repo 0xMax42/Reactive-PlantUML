@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### ⚙️ Miscellaneous Tasks
+
+- *(ci)* Harden auto bump workflow authentication and push handling - ([0573dcf](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/0573dcfd2002d4da5f25d200498b6528df285efa))
+
 ### 📦 Dependencies
 
 - *(deps)* Update debian:stable-slim docker digest to 449673e - ([b2c4203](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/b2c42034f7b020d9d6f67dbd747502527b2989f3))
