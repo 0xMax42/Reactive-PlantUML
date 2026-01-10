@@ -8,6 +8,18 @@
     ],
     "semanticCommitScope": "deps",
     "automergeStrategy": "rebase",
+    "postUpgradeTasks": {
+        "executionMode": "update",
+        "commands": [
+            "bump-debian-snapshot.py"
+        ],
+        "dataFileTemplate": "{{{ toJSON upgrades }}}",
+        "fileFilters": [
+            "Dockerfile",
+            "**/Dockerfile",
+            "**/Dockerfile.*"
+        ],
+    },
     "packageRules": [
         {
             "description": "Automerge Docker digest updates",

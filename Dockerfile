@@ -1,19 +1,38 @@
-FROM ubuntu:noble@sha256:c35e29c9450151419d9448b0fd75374fec4fff364a27f176fb458d472dfc9e54
+FROM debian:stable-slim@sha256:4bcb9db66237237d03b55b969271728dd3d955eaaa254b9db8a3db94550b1885 AS base
 
-# renovate:ubuntu: suite=noble-security arch=amd64 depName=openjdk-17-jre 
-ARG OPENJDK_17_JRE_VERSION="17.0.17+10-1~24.04"
-# renovate:ubuntu: suite=noble arch=amd64 depName=graphviz 
-ARG GRAPHVIZ_VERSION="2.42.2-9build1"
-# renovate:ubuntu: suite=noble arch=amd64 depName=curl 
-ARG CURL_VERSION="8.5.0-2ubuntu10.6"
-# renovate:ubuntu: suite=noble arch=amd64 depName=socat 
-ARG SOCAT_VERSION="1.8.0.0-4build3"
+ENV LANG=C.UTF-8
+ENV TZ=UTC
+ENV DEBIAN_FRONTEND=noninteractive
+
+# renovate:debian-snapshot
+ARG DEBIAN_SNAPSHOT=20260109T000000Z
+# hadolint ignore=SC3040
+RUN set -euo pipefail; \
+    rm -f /etc/apt/sources.list.d/debian.sources; \
+    rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list; \
+    rm -f /etc/apt/sources.list; \
+    printf '%s\n' \
+    "deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/${DEBIAN_SNAPSHOT} stable main" \
+    "deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/${DEBIAN_SNAPSHOT} stable-updates main" \
+    "deb [check-valid-until=no] http://snapshot.debian.org/archive/debian-security/${DEBIAN_SNAPSHOT} stable-security main" \
+    > /etc/apt/sources.list
+
+FROM base
+
+# renovate:debian: suite=stable arch=amd64 depName=openjdk-21-jre 
+ARG OPENJDK_21_JRE_VERSION="21.0.9+10-1~deb13u1"
+# renovate:debian: suite=stable arch=amd64 depName=graphviz 
+ARG GRAPHVIZ_VERSION="2.42.4-3"
+# renovate:debian: suite=stable arch=amd64 depName=curl 
+ARG CURL_VERSION="8.14.1-2+deb13u2"
+# renovate:debian: suite=stable arch=amd64 depName=socat 
+ARG SOCAT_VERSION="1.8.0.3-1"
 # renovate:github-release: packageName=plantuml/plantuml
 ARG PLANTUML_VERSION="v1.2025.10"
 
 RUN apt-get update -qq \
     && apt-get install -yqq --no-install-recommends \
-    openjdk-17-jre=$OPENJDK_17_JRE_VERSION \
+    openjdk-21-jre=$OPENJDK_21_JRE_VERSION \
     graphviz=$GRAPHVIZ_VERSION \
     curl=$CURL_VERSION \
     socat=$SOCAT_VERSION \
