@@ -164,6 +164,22 @@
             "packageNameTemplate": "{{{packageName}}}",
             "depNameTemplate": "{{#if depName}}{{{depName}}}{{else}}{{{packageName}}}{{/if}}",
             "autoReplaceStringTemplate": "# renovate:github-release:{{#if registryUrl}} registryUrl={{{registryUrl}}}{{/if}} packageName={{{packageName}}}{{#if depName}} depName={{{depName}}}{{/if}}\\nARG {{{argName}}}=\"{{{newValue}}}\""
-        }
+        },
+        {
+            customType: "regex",
+            managerFilePatterns: [
+                "/Dockerfile$/"
+            ],
+            // Pattern: 
+            // # renovate:debian: suite=XYZ arch=ABC depName=NAME 
+            // ARG FOO_VERSION="1.2.3"
+            matchStrings: [
+                '#\\s*renovate:debian:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\sARG .*?_VERSION="(?<currentValue>.*)"',
+            ],
+            // Debian Registry URL: Suite from regex or default to 'stable', components fixed, arch from regex or default to 'amd64'
+            registryUrlTemplate: "https://deb.debian.org/debian?suite={{#if suite}}{{suite}}{{else}}stable{{/if}}&components=main,contrib,non-free&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
+            datasourceTemplate: "deb",
+            versioningTemplate: "deb",
+        },
     ]
 }
