@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(ci)* Remove dedicated auto bump workflow and configure patch patterns in release action - ([b9b1193](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/b9b119339704b99a31e7ce5ed0b0528146e6fd90))
 - *(ci)* Harden auto bump workflow authentication and push handling - ([0573dcf](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/0573dcfd2002d4da5f25d200498b6528df285efa))
 
 ### 📦 Dependencies
