@@ -1,4 +1,4 @@
-FROM debian:stable-slim@sha256:449673e1239be6fdc89616f926abb87f360c280c3bb7ca3591694564359695fa AS base
+FROM debian:stable-slim@sha256:859b9c7129bf0aa6e24e507eca77afbfabe9fea6fec76838d9ed1a3c80513959 AS base
 
 ENV LANG=C.UTF-8
 ENV TZ=UTC
