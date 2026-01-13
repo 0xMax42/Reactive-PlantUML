@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(dockerfile)* Annotate debian snapshot arg for renovate - ([66ac951](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/66ac9512acb62a12c5ff27409e7cf83403a9cad3))
+
 ## [1.1.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.0..v1.1.2) - 2026-01-13
 
 ### 🐛 Bug Fixes
