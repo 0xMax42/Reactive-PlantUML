@@ -4,7 +4,7 @@ ENV LANG=C.UTF-8
 ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
-# renovate:debian-snapshot
+# renovate:debian-snapshot: datasource=deb,docker
 ARG DEBIAN_SNAPSHOT=20260109T000000Z
 # hadolint ignore=SC3040
 RUN set -euo pipefail; \
