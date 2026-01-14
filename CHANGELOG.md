@@ -2,11 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.2..v1.1.3) - 2026-01-14
 
 ### ⚙️ Miscellaneous Tasks
 
 - *(dockerfile)* Annotate debian snapshot arg for renovate - ([66ac951](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/66ac9512acb62a12c5ff27409e7cf83403a9cad3))
+
+### 📦 Dependencies
+
+- *(deps)* Update debian:stable-slim docker digest to ed542b2 - ([61a6c8d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/61a6c8d40dd63db04dc412fc976aab06e5e45958))
 
 ## [1.1.2](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.0..v1.1.2) - 2026-01-13
 
