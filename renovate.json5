@@ -177,7 +177,7 @@
                 '#\\s*renovate:debian:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\sARG .*?_VERSION="(?<currentValue>.*)"',
             ],
             // Debian Registry URL: Suite from regex or default to 'stable', components fixed, arch from regex or default to 'amd64'
-            registryUrlTemplate: "https://deb.debian.org/debian?suite={{#if suite}}{{suite}}{{else}}stable{{/if}}&components=main,contrib,non-free&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
+            registryUrlTemplate: "https://snapshot.debian.org/archive/debian/20991231/?suite={{#if suite}}{{suite}}{{else}}stable{{/if}}&components=main,contrib,non-free&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
             datasourceTemplate: "deb",
             versioningTemplate: "deb",
         },
