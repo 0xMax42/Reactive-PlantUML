@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(debs)* Point debian regex manager to snapshot archive - ([f9bd6f2](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f9bd6f24566d5afee74bcdfe82395e064a5a52b6))
+
 ## [1.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.2..v1.1.3) - 2026-01-14
 
 ### ⚙️ Miscellaneous Tasks
