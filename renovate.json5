@@ -5,7 +5,7 @@
 		":semanticCommits",
 		":semanticCommitTypeAll(chore)",
 		"mergeConfidence:all-badges",
-		"gitea>renovate-bot/presets:debian.json5#v0"
+		"local>renovate-bot/presets:debian.json5#v0"
 	],
 	"semanticCommitScope": "deps",
 	"automergeStrategy": "rebase",
