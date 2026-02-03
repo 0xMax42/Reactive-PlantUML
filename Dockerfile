@@ -20,6 +20,7 @@ RUN set -euo pipefail; \
 FROM base
 
 # renovate:debian: suite=stable arch=amd64 depName=openjdk-21-jre 
+# renovate:debian-security: suite=stable-security arch=amd64 depName=openjdk-21-jre 
 ARG OPENJDK_21_JRE_VERSION="21.0.9+10-1~deb13u1"
 # renovate:debian: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
