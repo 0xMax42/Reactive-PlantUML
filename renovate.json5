@@ -5,7 +5,7 @@
 		":semanticCommits",
 		":semanticCommitTypeAll(chore)",
 		"mergeConfidence:all-badges",
-		"local>renovate-bot/presets:debian.json5#v0"
+		"https://git.0xmax42.io/renovate-bot/presets/raw/tag/v0/debian.json5"
 	],
 	"semanticCommitScope": "deps",
 	"automergeStrategy": "rebase",
