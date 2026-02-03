@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- Point renovate debian preset to remote tag URL - ([806cf0c](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/806cf0c54c75e720e13b09c23ba99459cf83f775))
 - Point renovate debian preset to local source - ([f365651](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f3656513d4273ac236f07167e6503884314aab8d))
 - *(dockerfile)* Switch to debian snapshot renovate preset - ([5e9403b](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/5e9403bc85cf22c91c895473b458e597e7fea228))
 
