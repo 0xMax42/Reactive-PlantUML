@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(dockerfile)* Annotate openjdk jre security suite for renovate - ([ec03b16](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/ec03b1636a6d83dd0d503299d67518f1903a2b94))
+- *(debs)* Extend renovate debian regex managers for security suites - ([a0203c3](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a0203c34e62b657daf18076f228c63bda1d61d63))
 - *(debs)* Point debian regex manager to snapshot archive - ([f9bd6f2](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/f9bd6f24566d5afee74bcdfe82395e064a5a52b6))
 
 ## [1.1.3](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.2..v1.1.3) - 2026-01-14
