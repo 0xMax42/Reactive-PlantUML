@@ -102,8 +102,7 @@
 			"versioningTemplate": "semver-coerced",
 			"registryUrlTemplate": "{{#if registryUrl}}{{registryUrl}}{{else}}https://github.com/{{/if}}",
 			"packageNameTemplate": "{{{packageName}}}",
-			"depNameTemplate": "{{#if depName}}{{{depName}}}{{else}}{{{packageName}}}{{/if}}",
-			"autoReplaceStringTemplate": "# renovate:github-release:{{#if registryUrl}} registryUrl={{{registryUrl}}}{{/if}} packageName={{{packageName}}}{{#if depName}} depName={{{depName}}}{{/if}}\\nARG {{{argName}}}=\"{{{newValue}}}\""
+			"depNameTemplate": "{{#if depName}}{{{depName}}}{{else}}{{{packageName}}}{{/if}}"
 		},
 	]
 }
