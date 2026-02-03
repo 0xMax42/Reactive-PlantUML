@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(dockerfile)* Switch to debian snapshot renovate preset - ([5e9403b](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/5e9403bc85cf22c91c895473b458e597e7fea228))
+
 ## [1.1.5](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.4..v1.1.5) - 2026-02-03
 
 ### 📦 Dependencies
