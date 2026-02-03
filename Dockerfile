@@ -19,14 +19,13 @@ RUN set -euo pipefail; \
 
 FROM base
 
-# renovate:debian: suite=stable arch=amd64 depName=openjdk-21-jre 
-# renovate:debian-security: suite=stable-security arch=amd64 depName=openjdk-21-jre 
+# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=openjdk-21-jre 
 ARG OPENJDK_21_JRE_VERSION="21.0.10+7-1~deb13u1"
-# renovate:debian: suite=stable arch=amd64 depName=graphviz 
+# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
-# renovate:debian: suite=stable arch=amd64 depName=curl 
+# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=curl 
 ARG CURL_VERSION="8.14.1-2+deb13u2"
-# renovate:debian: suite=stable arch=amd64 depName=socat 
+# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=socat 
 ARG SOCAT_VERSION="1.8.0.3-1"
 # renovate:github-release: packageName=plantuml/plantuml
 ARG PLANTUML_VERSION="v1.2025.10"

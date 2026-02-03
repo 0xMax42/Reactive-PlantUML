@@ -4,22 +4,11 @@
 		"config:recommended",
 		":semanticCommits",
 		":semanticCommitTypeAll(chore)",
-		"mergeConfidence:all-badges"
+		"mergeConfidence:all-badges",
+		"gitea>renovate-bot/presets:debian.json5#v0"
 	],
 	"semanticCommitScope": "deps",
 	"automergeStrategy": "rebase",
-	"postUpgradeTasks": {
-		"executionMode": "update",
-		"commands": [
-			"bump-debian-snapshot.py"
-		],
-		"dataFileTemplate": "{{{ toJSON upgrades }}}",
-		"fileFilters": [
-			"Dockerfile",
-			"**/Dockerfile",
-			"**/Dockerfile.*"
-		],
-	},
 	"packageRules": [
 		{
 			"description": "Automerge Docker digest updates",
@@ -72,40 +61,6 @@
 			"groupName": "github release updates",
 		},
 		{
-			description: "Automerge Debian patch package version updates",
-			matchDatasources: [
-				"deb"
-			],
-			matchUpdateTypes: [
-				"patch"
-			],
-			automerge: true,
-			automergeStrategy: "rebase",
-			automergeType: "pr",
-			labels: [
-				"dependency/automerge",
-				"dependency/debian/patch"
-			],
-			"groupName": "debian package updates",
-		},
-		{
-			description: "Automerge Debian minor package version updates",
-			matchDatasources: [
-				"deb"
-			],
-			matchUpdateTypes: [
-				"minor",
-			],
-			automerge: true,
-			automergeStrategy: "rebase",
-			automergeType: "pr",
-			labels: [
-				"dependency/automerge",
-				"dependency/debian/minor"
-			],
-			"groupName": "debian package updates",
-		},
-		{
 			"matchUpdateTypes": [
 				"minor",
 				"patch",
@@ -131,21 +86,6 @@
 	],
 	"customManagers": [
 		{
-			customType: "regex",
-			managerFilePatterns: [
-				"/Dockerfile$/"
-			],
-			// Pattern: 
-			// # renovate:ubuntu: suite=XYZ arch=ABC depName=NAME 
-			// ARG FOO_VERSION="1.2.3"
-			matchStrings: [
-				'#\\s*renovate:ubuntu:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\sARG .*?_VERSION="(?<currentValue>.*)"',
-			],
-			registryUrlTemplate: "https://archive.ubuntu.com/ubuntu{{#if suite}}?suite={{suite}}&{{else}}?{{/if}}components=main,universe,multiverse&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
-			datasourceTemplate: "deb",
-			versioningTemplate: "deb",
-		},
-		{
 			"customType": "regex",
 			"managerFilePatterns": [
 				"/Dockerfile$/"
@@ -164,38 +104,6 @@
 			"packageNameTemplate": "{{{packageName}}}",
 			"depNameTemplate": "{{#if depName}}{{{depName}}}{{else}}{{{packageName}}}{{/if}}",
 			"autoReplaceStringTemplate": "# renovate:github-release:{{#if registryUrl}} registryUrl={{{registryUrl}}}{{/if}} packageName={{{packageName}}}{{#if depName}} depName={{{depName}}}{{/if}}\\nARG {{{argName}}}=\"{{{newValue}}}\""
-		},
-		{
-			customType: "regex",
-			managerFilePatterns: [
-				"/Dockerfile$/"
-			],
-			// Pattern: 
-			// # renovate:debian: suite=XYZ arch=ABC depName=NAME 
-			// ARG FOO_VERSION="1.2.3"
-			matchStrings: [
-				'(?m)^#\\s*renovate:debian:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\s*$(?:\r?\n^#.*$)*\r?\n^ARG .*?_VERSION="(?<currentValue>.*)"',
-			],
-			// Debian Registry URL: Suite from regex or default to 'stable', components fixed, arch from regex or default to 'amd64'
-			registryUrlTemplate: "https://snapshot.debian.org/archive/debian/20991231/?suite={{#if suite}}{{suite}}{{else}}stable{{/if}}&components=main,contrib,non-free&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
-			datasourceTemplate: "deb",
-			versioningTemplate: "deb",
-		},
-		{
-			customType: "regex",
-			managerFilePatterns: [
-				"/Dockerfile$/"
-			],
-			// Pattern: 
-			// # renovate:debian-security: suite=XYZ arch=ABC depName=NAME 
-			// ARG FOO_VERSION="1.2.3"
-			matchStrings: [
-				'(?m)^#\\s*renovate:debian-security:\\s*?(suite=(?<suite>.*?))?\\s*?(arch=(?<arch>.*?))?\\s*depName=(?<depName>.*?)?\\s*$(?:\r?\n^#.*$)*\r?\n^ARG .*?_VERSION="(?<currentValue>.*)"',
-			],
-			// Debian Registry URL: Suite from regex or default to 'stable', components fixed, arch from regex or default to 'amd64'
-			registryUrlTemplate: "https://snapshot.debian.org/archive/debian-security/20991231/?suite={{#if suite}}{{suite}}{{else}}stable-security{{/if}}&components=main,contrib,non-free&binaryArch={{#if arch}}{{arch}}{{else}}amd64{{/if}}",
-			datasourceTemplate: "deb",
-			versioningTemplate: "deb",
 		},
 	]
 }
