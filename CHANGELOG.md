@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- Update renovate presets and remove github regex manager - ([a749155](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a7491557fa76392469d8caa067149821f7aa6c80))
+
 ## [1.1.6](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.5..v1.1.6) - 2026-02-03
 
 ### ⚙️ Miscellaneous Tasks
