@@ -28,7 +28,7 @@ ARG CURL_VERSION="8.14.1-2+deb13u2"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=socat 
 ARG SOCAT_VERSION="1.8.0.3-1"
 # renovate:github-release: packageName=plantuml/plantuml
-ARG PLANTUML_VERSION="v1.2025.10"
+ARG PLANTUML_VERSION="v1.2026.1"
 
 RUN apt-get update -qq \
     && apt-get install -yqq --no-install-recommends \
