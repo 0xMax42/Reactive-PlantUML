@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### ⚙️ Miscellaneous Tasks
 
+- Switch renovate config to shared remote presets - ([7899f4d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/7899f4d23cfa8457becf6ee41e8a4cc4612219c3))
 - Update renovate presets and remove github regex manager - ([a749155](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a7491557fa76392469d8caa067149821f7aa6c80))
 
 ## [1.1.6](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.5..v1.1.6) - 2026-02-03
