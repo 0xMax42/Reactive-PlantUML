@@ -2,12 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [1.1.7](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.6..v1.1.7) - 2026-02-24
 
 ### ⚙️ Miscellaneous Tasks
 
 - Switch renovate config to shared remote presets - ([7899f4d](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/7899f4d23cfa8457becf6ee41e8a4cc4612219c3))
 - Update renovate presets and remove github regex manager - ([a749155](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a7491557fa76392469d8caa067149821f7aa6c80))
+
+### 📦 Dependencies
+
+- *(deps)* Update debian:stable-slim docker digest to 85dfcff - ([cfc6973](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/cfc6973f65b36f06b397bc62cb008b4f8d3c9bf4))
 
 ## [1.1.6](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.5..v1.1.6) - 2026-02-03
 
