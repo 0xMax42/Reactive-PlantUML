@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- *(ci)* Publish debs to main or unstable based on prerelease - ([9d68dc7](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9d68dc7cdcf468e4906f56d4005ed37653673032))
+
 ## [1.1.10](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.9..v1.1.10) - 2026-04-07
 
 ### 📦 Dependencies
