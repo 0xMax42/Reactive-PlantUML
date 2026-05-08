@@ -1,11 +1,11 @@
-FROM debian:stable-slim@sha256:81df2903fe85d7d6addce08d143cd47a44a1397e712d7be9fe80e8a7e7bf5559 AS base
+FROM debian:stable-slim@sha256:a053c4131f5c7eefda40803aca19d39e605bbc92add3cd49665dbbdb1743478f AS base
 
 ENV LANG=C.UTF-8
 ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate:debian-snapshot: datasource=deb,docker
-ARG DEBIAN_SNAPSHOT=20260508T205713Z
+ARG DEBIAN_SNAPSHOT=20260508T235256Z
 # hadolint ignore=SC3040
 RUN set -euo pipefail; \
     rm -f /etc/apt/sources.list.d/debian.sources; \
