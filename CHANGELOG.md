@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.21](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.20..v1.1.21) - 2026-05-27
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency plantuml/plantuml to v1.2026.5 - ([0f7578e](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/0f7578e9420c08fb9993a3dd4f2488b8b886af44))
+
 ## [1.1.20](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.19..v1.1.20) - 2026-05-20
 
 ### 📦 Dependencies
