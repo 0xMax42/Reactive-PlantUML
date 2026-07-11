@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.27](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.26..v1.1.27) - 2026-07-11
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency curl-amd64 to v8.14.1-2+deb13u4 - ([cd9b23c](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/cd9b23cd1c4972532d595efaf0c3e058677b0f48))
+
 ## [1.1.26](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.25..v1.1.26) - 2026-06-24
 
 ### 📦 Dependencies
