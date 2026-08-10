@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.31](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.30..v1.1.31) - 2026-08-10
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency openjdk-21-jre-amd64-security to v21.0.12+8-1~deb13u1 - ([9693d1e](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9693d1ecda6695fc29c03e9f361c4c679cae12b5))
+
 ## [1.1.30](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.29..v1.1.30) - 2026-08-05
 
 ### 📦 Dependencies
