@@ -5,7 +5,7 @@ ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate:debian-snapshot: datasource=deb,docker
-ARG DEBIAN_SNAPSHOT=20260811T234603Z
+ARG DEBIAN_SNAPSHOT=20260821T223355Z
 # hadolint ignore=SC3040
 RUN set -euo pipefail; \
     rm -f /etc/apt/sources.list.d/debian.sources; \
@@ -20,7 +20,7 @@ RUN set -euo pipefail; \
 FROM base
 
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=openjdk-21-jre 
-ARG OPENJDK_21_JRE_VERSION="21.0.12+8-1~deb13u1"
+ARG OPENJDK_21_JRE_VERSION="21.0.12.1+1-1~deb13u1"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=curl 
