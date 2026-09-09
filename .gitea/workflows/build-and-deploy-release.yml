@@ -17,11 +17,11 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update -qq
-          apt-get install -yqq debcrafter-0 tea-pkg-0
+          apt-get install -yqq debcrafter-0 tea-pkg-0 podman
 
       - name: Build DEB package
         run: |
-          debcrafter run --container-exec docker --image debian:oldstable
+          debcrafter run --image docker.io/library/debian:oldstable
 
       - name: Upload DEB package
         env:
