@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- Use debcrafter Podman default for package builds - ([6348fd9](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/6348fd9c3601f3723b709027a93abeb84f444a4a))
+- Migrate AMD64 smoke test to Podman with OCI cache - ([985deeb](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/985deeb9b11159dab66ff63d118bfd3e02b72393))
+
+### 💼 Other
+
+- Qualify Debian base image and use portable shell options - ([a2eff16](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/a2eff161169772b6413a6bbb7798c418f2215240))
+
 ## [1.1.36](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.35..v1.1.36) - 2026-09-05
 
 ### 📦 Dependencies
