@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.38](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.37..v1.1.38) - 2026-09-12
+
+### 📦 Dependencies
+
+- *(deps)* Update debian package updates - ([6e90ee5](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/6e90ee5705f73b94671ba790978bb18f8298420a))
+
 ## [1.1.37](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.36..v1.1.37) - 2026-09-09
 
 ### ⚙️ Miscellaneous Tasks
