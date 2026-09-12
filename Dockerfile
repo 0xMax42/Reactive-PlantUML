@@ -5,7 +5,7 @@ ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate:debian-snapshot: datasource=deb,docker
-ARG DEBIAN_SNAPSHOT=20260825T025301Z
+ARG DEBIAN_SNAPSHOT=20260912T082848Z
 RUN set -eu; \
     rm -f /etc/apt/sources.list.d/debian.sources; \
     rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list; \
@@ -23,9 +23,9 @@ ARG OPENJDK_21_JRE_VERSION="21.0.12.1+1-1~deb13u1"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=curl 
-ARG CURL_VERSION="8.14.1-2+deb13u4"
+ARG CURL_VERSION="8.14.1-2+deb13u5"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=socat 
-ARG SOCAT_VERSION="1.8.0.3-1"
+ARG SOCAT_VERSION="1.8.0.3-1+deb13u1"
 # renovate:github-release: packageName=plantuml/plantuml
 ARG PLANTUML_VERSION="v1.2026.8"
 
