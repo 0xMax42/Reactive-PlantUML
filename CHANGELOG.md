@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.40](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.39..v1.1.40) - 2026-10-06
+
+### 📦 Dependencies
+
+- *(deps)* Update docker.io/library/debian:stable-slim docker digest to eb593cf - ([3b9a14e](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/3b9a14eb36df236ec553243d9895c33d772eaed8))
+
 ## [1.1.39](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.38..v1.1.39) - 2026-09-19
 
 ### 📦 Dependencies
