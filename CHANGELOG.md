@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.41](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.40..v1.1.41) - 2026-10-14
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency curl-amd64-security to v8.14.1-2+deb13u7 - ([7c71159](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/7c71159c8908c1c780905169d5471f5b117b93ac))
+
 ## [1.1.40](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.39..v1.1.40) - 2026-10-06
 
 ### 📦 Dependencies
