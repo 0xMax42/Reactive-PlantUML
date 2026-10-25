@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.43](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.42..v1.1.43) - 2026-10-25
+
+### 🐛 Bug Fixes
+
+- *(container)* Replace OpenJDK runtime with headless variant (#69) - ([87c72f4](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/87c72f44180b0f98feef34190ba325f25785b868))
+
+### 📦 Dependencies
+
+- *(deps)* Update docker.io/library/debian:stable-slim docker digest to a717a33 - ([9fc0f58](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/9fc0f582ca7bafb0a70e03292856146babaa25b5))
+
 ## [1.1.42](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.41..v1.1.42) - 2026-10-17
 
 ### 📦 Dependencies
