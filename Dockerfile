@@ -18,8 +18,8 @@ RUN set -eu; \
 
 FROM base
 
-# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=openjdk-21-jre 
-ARG OPENJDK_21_JRE_VERSION="21.0.12.1+1-1~deb13u1"
+# renovate:debian-snapshot+security: suite=stable arch=amd64 depName=openjdk-21-jre-headless
+ARG OPENJDK_21_JRE_HEADLESS_VERSION="21.0.12.1+1-1~deb13u1"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=curl 
@@ -31,7 +31,7 @@ ARG PLANTUML_VERSION="v1.2026.9"
 
 RUN apt-get update -qq \
     && apt-get install -yqq --no-install-recommends \
-    openjdk-21-jre=$OPENJDK_21_JRE_VERSION \
+    openjdk-21-jre-headless=$OPENJDK_21_JRE_HEADLESS_VERSION \
     graphviz=$GRAPHVIZ_VERSION \
     curl=$CURL_VERSION \
     socat=$SOCAT_VERSION \
