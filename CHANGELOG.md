@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.44](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.43..v1.1.44) - 2026-10-27
+
+### 📦 Dependencies
+
+- *(deps)* Update dependency openjdk-21-jre-headless-amd64-security to v21.0.13+9-1~deb13u2 - ([3e579d9](https://git.0xmax42.io/maxp/Reactive-PlantUML/commit/3e579d969333b4a8fc443aaff53f98fd8def4030))
+
 ## [1.1.43](https://git.0xmax42.io/maxp/Reactive-PlantUML/compare/v1.1.42..v1.1.43) - 2026-10-25
 
 ### 🐛 Bug Fixes
