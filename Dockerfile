@@ -1,11 +1,11 @@
-FROM docker.io/library/debian:stable-slim@sha256:a717a33469731894e77e912ea7d714e27c2dc38ee6554fd1a3102e92999cfc66 AS base
+FROM docker.io/library/debian:stable-slim@sha256:9e3624ad785d0d322f0c69194c2c0ebba7bc5fda3e2c6523ac095b4f08a12ba7 AS base
 
 ENV LANG=C.UTF-8
 ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate:debian-snapshot: datasource=deb,docker
-ARG DEBIAN_SNAPSHOT=20261027T210019Z
+ARG DEBIAN_SNAPSHOT=20261028T023420Z
 RUN set -eu; \
     rm -f /etc/apt/sources.list.d/debian.sources; \
     rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list; \
