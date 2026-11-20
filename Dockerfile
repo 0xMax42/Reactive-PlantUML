@@ -5,7 +5,7 @@ ENV TZ=UTC
 ENV DEBIAN_FRONTEND=noninteractive
 
 # renovate:debian-snapshot: datasource=deb,docker
-ARG DEBIAN_SNAPSHOT=20261105T083300Z
+ARG DEBIAN_SNAPSHOT=20261120T080532Z
 RUN set -eu; \
     rm -f /etc/apt/sources.list.d/debian.sources; \
     rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list; \
@@ -19,7 +19,7 @@ RUN set -eu; \
 FROM base
 
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=openjdk-21-jre-headless
-ARG OPENJDK_21_JRE_HEADLESS_VERSION="21.0.13+9-1~deb13u2"
+ARG OPENJDK_21_JRE_HEADLESS_VERSION="21.0.13.1+2-1~deb13u1"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=graphviz 
 ARG GRAPHVIZ_VERSION="2.42.4-3"
 # renovate:debian-snapshot+security: suite=stable arch=amd64 depName=curl 
